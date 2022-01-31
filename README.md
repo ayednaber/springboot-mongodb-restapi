@@ -45,6 +45,15 @@ We are trying to have entries in our new database that will look like this:
 Therefore, in our src/main/java/com.example.demomongo, we will create a Student class and we will define all of the above properties.
 Note that Gender was defined as an enum class, and Address was also defined as a separate class (since it is a nested document).
 
+Any document in MongoDB needs to have an id, and therefore we go back to our student class,
+and we add `@Document` to specify that each student object will signify a document in our database, as well as we add an id field and annotate it with `@Id`.
+
+Now, to add data to it, we need a **Repository**.
+
+## Mongo Repository
+
+
+
 
 
 

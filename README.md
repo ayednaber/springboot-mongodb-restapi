@@ -100,7 +100,12 @@ Now that we have these necessary skills, let us build an API that
 clients can consume.
 
 ## Building API
+We have to create a StudentController class, in the same place as our other classes.
+In the StudentController, we will define a mapping which will be after localhost 8080, which will be api/v1/students.
+In it we will also define a GetMapping, and relate it to a `StudentService.java` file.
+This file will use the StudentRepository to connect to the DB and find all.
 
+Now running the application and visiting `localhost:8080/api/v1/students`
 
 
 

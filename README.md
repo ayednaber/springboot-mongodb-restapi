@@ -35,10 +35,15 @@ spring.data.mongodb.port=27017
 spring.data.mongodb.host=localhost
 ```
 As for the database name, we defined it to be "amigoscode", so we go to our Mongo Express, and we create a database with that name.
-![Mongo Express](readmeimages/creatingdb.png)
+![Creating DB in Mongo Express](readmeimages/creatingdb.png)
 
 Now that we defined a connection with our database, if we run our Spring Boot application, it will run successfully, unlike before where it showed a few errors.
 
+## Defining Collections/Documents in our Database
+We are trying to have entries in our new database that will look like this:
+![Sample Student Entry](readmeimages/samplestudent.png)
+Therefore, in our src/main/java/com.example.demomongo, we will create a Student class and we will define all of the above properties.
+Note that Gender was defined as an enum class, and Address was also defined as a separate class (since it is a nested document).
 
 
 

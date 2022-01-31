@@ -19,6 +19,8 @@ and starts MongoDB. Another option than running it from the UI like we did is ty
 `docker compose -f docker-compose.yaml -d`, where -d means detached.
 
 Another part of the `docker-compose.yaml` file is mongoexpress, where if we visit `localhost:8081`, we see our database up and running!
+![Mongo Express](readmeimages/mongoexpress.png)
+
 
 
 

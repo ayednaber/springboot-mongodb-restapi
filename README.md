@@ -51,6 +51,21 @@ and we add `@Document` to specify that each student object will signify a docume
 Now, to add data to it, we need a **Repository**.
 
 ## Mongo Repository
+In order to create this repository, we will create an Interface in the same direotory as our other java classes.
+This interface will be called `StudentRepository`, and it will extend `MongoRepository<Student, String>`, the Student is the object type, and
+String is the data type of the Student's id.
+
+Let us go to our `DemomongoApplication.java`, which is our main Spring Boot application file, and in it,
+we will define a bean, and a command line runner. Inside that, we define an instance od a student. We go back to our Student class
+and we create a constructor without the ID.
+
+We will give all of the required parameters to our student instance. We also used the `@AllArgsConstructor` in our Address class.
+
+Then we use the repository we defined, and use the insert method to add it to our database.
+
+Now once we run our application, our entry will be added to the database. Let us check our application:
+![Student Entry in DB](readmeimages/studentcollection.png)
+
 
 
 

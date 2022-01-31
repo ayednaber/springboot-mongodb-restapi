@@ -83,6 +83,24 @@ Then, we package the MongoTemplate along with the repository, and use it to find
 If that list is not empty, that means we have a problem, and if it is empty, that means that we can go ahead and add our student to our
 database. If the list is empty but the student exists, then that will be placed in our else clause.
 
+### Easier Way of Writing Custom Queries (Directly in StudentRepository.java)
+We defined a method inside our repository, to find a student by email, and define a string email as its parameter.
+Then in our demo application, we define the following code:
+```
+repository.findStudentByEmail(email)
+	.ifPresentOrElse(s -> {
+		System.out.println(s + " already exists");
+	}, () -> {
+		System.out.println("Inserting student " + student);
+		repository.insert(student);
+	});
+```
+
+Now that we have these necessary skills, let us build an API that
+clients can consume.
+
+## Building API
+
 
 
 

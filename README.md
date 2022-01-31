@@ -78,6 +78,10 @@ Now, if we run our application, we will run into an error, since we already have
 ## Learning about Writing Custom Queries
 We want to add custom queries, so we can some logic if an email does not exist, as opposed to our whole Spring Boot applicaiton to crash and not run.
 
+The logic that we added uses the Query package from Mongo, where we add a criteria which is that the email should be the same email as above.
+Then, we package the MongoTemplate along with the repository, and use it to find students that have the same email, and this returns a list.
+If that list is not empty, that means we have a problem, and if it is empty, that means that we can go ahead and add our student to our
+database. If the list is empty but the student exists, then that will be placed in our else clause.
 
 
 
